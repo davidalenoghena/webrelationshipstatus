@@ -1,0 +1,34 @@
+.custom-navbar {
+    background-color: #343a40;
+    padding: 1rem;
+}
+
+    .custom-navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .custom-navbar .navbar-brand {
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+        .custom-navbar .navbar-brand i {
+            margin-right: 0.5rem;
+        }
+
+    .custom-navbar .navbar-buttons {
+        display: flex;
+        align-items: center;
+    }
+
+        .custom-navbar .navbar-buttons .btn {
+            margin-left: 1rem;
+        }
+
+        .custom-navbar .navbar-buttons .profile-button {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
