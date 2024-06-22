@@ -33,7 +33,7 @@
         font-size: large;
         padding: 20px 20px;
         background-color: #4CAF50; /* Green color */
-        color: white;
+        color: white; /* White color */
         border: none;
         border-radius: 10px;
     }
