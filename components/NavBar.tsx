@@ -39,10 +39,6 @@ export const NavBar = () => {
                         <button className="btn btn-secondary profile-button" onClick={() => setIsModalOpen(true)}>
                             PROFILE
                         </button>
-                        <ProfileModal
-                            isOpen={isModalOpen}
-                            onClose={() => setIsModalOpen(false)}
-                            profile={name}:"sldfk"; age: 55; bio:sldfk}
                     </div>
                 </div>
             </nav>
