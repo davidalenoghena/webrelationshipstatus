@@ -114,6 +114,13 @@ export const CONTRACT_ABI = [
     },
     {
         "type": "function",
+        "name": "deleteProfile",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
         "name": "disconnectPartner",
         "inputs": [],
         "outputs": [],

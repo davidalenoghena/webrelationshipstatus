@@ -2,20 +2,21 @@ import React from 'react';
 import './MessageModal.css';
 
 interface MessageModalProps {
-    message: string;
-    type: 'success' | 'error';
+    isOpen: boolean;
     onClose: () => void;
+    message: string;
+    isError: boolean;
 }
 
-const MessageModal: React.FC<MessageModalProps> = ({ message, type, onClose }) => {
+export const MessageModal: React.FC<MessageModalProps> = ({ isOpen, onClose, message, isError }) => {
+    if (!isOpen) return null;
+
     return (
-        <div className="modal-backdrop">
-            <div className={`modal-content ${type}`}>
-                <span className="close-button" onClick={onClose}>&times;</span>
-                <p>{message}</p>
+        <div className="status-modal-backdrop">
+            <div className="status-modal-content">
+                <button onClick={onClose} className="close-status-modal-button">X</button>
+                <p className={`status-modal-message ${isError ? 'error' : 'success'}`}>{message}</p>
             </div>
         </div>
     );
 };
-
-export default MessageModal;

@@ -17,10 +17,16 @@ export const Search = () => {
     });
 
     const profileData = {
-        name: searchProfile?.name,
-        instID: searchProfile?.instID,
-        relationshipStatus: searchProfile?.relStatus
+        name: searchProfile?.name ?? "No Data Found",
+        instID: searchProfile?.instID ?? "No Data Found",
+        relationshipStatus: searchProfile?.relStatus ?? 5
     };
+
+    //const profileData = {
+    //    name: "David",
+    //    instID: "Vocie",
+    //    relationshipStatus: 0
+    //};
 
     //const profileData = searchProfile;
 

@@ -21,7 +21,7 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         margin-right: 10px;
-        width: 300px; /* Adjust the width to accommodate 16 characters */
+        width: 500px; /* Adjust the width to accommodate 16 characters */
     }
 
     .search-bar button {

@@ -1,13 +1,15 @@
 import React from 'react';
 import './ProfileModal.css';
 //import contract
+
+enum RelStatus { Single, Pending, Relationship }
 interface ProfileModalProps {
     isOpen: boolean;
     onClose: () => void;
     profile: {
         name: string;
         instID: string;
-        relationshipStatus: string;
+        relationshipStatus: number;
     };
 }
 
@@ -20,7 +22,7 @@ export const ProfileModal: React.FC<ProfileModalProps> = ({ isOpen, onClose, pro
                 <button className="close-button" onClick={onClose}>X</button>
                 <h2>{profile.name}</h2>
                 <p>Instagram ID: {profile.instID}</p>
-                <p>{profile.relationshipStatus}</p>
+                <p>{RelStatus[profile.relationshipStatus]}</p>
             </div>
         </div>
     );

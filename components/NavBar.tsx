@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ConnectButton, useActiveAccount } from "thirdweb/react";
 import { client } from "../src/app/client";
 import { chain } from "../src/app/chain";
-import { ProfileModal } from "./ProfileModal";
+import { CreateProfileModal } from "./CreateProfileModal";
 import React from 'react';
 import './Navbar.css';
 
@@ -23,6 +23,7 @@ const initialUserProfile: UserProfile = {
 export const NavBar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const account = useActiveAccount();
+
     if (account) {
         return (
             <nav className="custom-navbar">
@@ -39,6 +40,10 @@ export const NavBar = () => {
                         <button className="btn btn-secondary profile-button" onClick={() => setIsModalOpen(true)}>
                             PROFILE
                         </button>
+                        <CreateProfileModal
+                            isOpen={isModalOpen}
+                            onClose={() => setIsModalOpen(false)}
+                        />
                     </div>
                 </div>
             </nav>
